@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HW1-client" />
+        <module name="HW1-client1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
