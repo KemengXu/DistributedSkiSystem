@@ -1,15 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Results {
   private int successfulPosts;
   private int failedPosts;
-  private List<String> fileLines;
 
   public Results() {
     this.successfulPosts = 0;
     this.failedPosts = 0;
-    this.fileLines = new ArrayList<>();
   }
 
   public synchronized void incrementSuccessfulPost(int increment) {
@@ -20,10 +15,6 @@ public class Results {
     this.failedPosts += increment;
   }
 
-  public synchronized void addNewResults(List<String> newResults) {
-    this.fileLines.addAll(newResults);
-  }
-
   public int getSuccessfulPosts() {
     return this.successfulPosts;
   }
@@ -31,6 +22,4 @@ public class Results {
   public int getFailedPosts() {
     return this.failedPosts;
   }
-
-  public List<String> getFileLines() { return this.fileLines; }
 }

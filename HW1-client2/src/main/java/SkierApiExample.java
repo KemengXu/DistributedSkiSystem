@@ -4,7 +4,7 @@ import io.swagger.client.api.SkiersApi;
 import io.swagger.client.model.LiftRide;
 import java.util.Random;
 
-public class ResortsApiExample {
+public class SkierApiExample {
 
   public static void main(String[] args) {
     long startTime = System.currentTimeMillis();

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3bd25a6f-f327-435c-a950-660a1b5f041f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="24rQzjAHIq4dAJ8oqoCcrxuBL8X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.UpicSkiClient">
+    <configuration name="ResortsApiExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ResortsApiExample" />
+      <module name="HW1-client1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpicSkiClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UpicSkiClient" />
+      <module name="HW1-client1" />
+      <option name="PROGRAM_PARAMETERS" value="--numThreads 256 --numSkiers 20000 --numLifts 40" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ResortsApiExample" />
+      <item itemvalue="Application.UpicSkiClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UpicSkiClient" />
+        <item itemvalue="Application.ResortsApiExample" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3bd25a6f-f327-435c-a950-660a1b5f041f" name="Default Changelist" comment="" />
+      <created>1644386489795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644386489795</updated>
+      <workItem from="1644386494918" duration="2465000" />
+      <workItem from="1644563932149" duration="2919000" />
+      <workItem from="1644567067914" duration="22889000" />
+      <workItem from="1644737609161" duration="2343000" />
+      <workItem from="1644770984488" duration="722000" />
+      <workItem from="1644959668045" duration="1942000" />
+      <workItem from="1645036017048" duration="8539000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645065790064">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1645065790064" />
+    <state x="765" y="60" key="#com.intellij.ide.util.MemberChooser" timestamp="1644606938105">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="765" y="60" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1644606938105" />
+    <state x="421" y="45" key="FileChooserDialogImpl" timestamp="1644389120494">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="45" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1644389120494" />
+    <state width="1237" height="406" key="GridCell.Tab.0.bottom" timestamp="1645066814246">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="406" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1645066814246" />
+    <state width="1237" height="406" key="GridCell.Tab.0.center" timestamp="1645066814246">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="406" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1645066814246" />
+    <state width="1237" height="406" key="GridCell.Tab.0.left" timestamp="1645066814246">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="406" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1645066814246" />
+    <state width="1237" height="406" key="GridCell.Tab.0.right" timestamp="1645066814246">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="406" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1645066814246" />
+    <state x="287" y="44" key="NewModule_or_Project.wizard" timestamp="1644389181115">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="287" y="44" key="NewModule_or_Project.wizard/0.0.1280.680@0.0.1280.680" timestamp="1644389181115" />
+    <state x="140" y="0" key="SettingsEditor" timestamp="1644567214903">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="140" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1644567214903" />
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1644771000671">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1644771000671" />
+    <state x="20" y="63" key="new project wizard" timestamp="1644725601001">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="20" y="63" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1644725601001" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1644567030050">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1644567030050" />
+  </component>
+</project>

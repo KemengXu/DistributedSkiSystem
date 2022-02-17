@@ -32,7 +32,7 @@ public class Phase {
     this.latch = latch;
     this.curLatch = new CountDownLatch(numThreads);
     this.results = results;
-    this.part2Records = new ArrayList<Record>();
+    this.part2Records = new ArrayList<>();
   }
 
   public void run() throws InterruptedException {

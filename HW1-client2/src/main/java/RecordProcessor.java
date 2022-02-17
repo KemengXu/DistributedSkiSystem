@@ -8,9 +8,11 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class RecordProcessor {
   private List<Record> recordList;
+  private long throughPut;
 
-  public RecordProcessor(List<Record> recordList) {
+  public RecordProcessor(List<Record> recordList, long throughPut) {
     this.recordList = recordList;
+    this.throughPut = throughPut;
   }
 
   public void process(){
@@ -41,10 +43,10 @@ public class RecordProcessor {
       latencies.add(record.getLatency());
     }
     System.out.println("\n\nClient Part 2 Result:");
-    System.out.println("----------------------------------------------- total: " + latencies.size());
+    System.out.println("-----------------------------------------------");
     System.out.println("Mean response time: " + stats.getMean() + " milliseconds");
     System.out.println("Median response time: " + stats.getPercentile(50) + " milliseconds");
-    System.out.println("Throughput: " + 1000 * latencies.size() / stats.getSum() + " requests/second");
+    System.out.println("Throughput: " + throughPut + " requests/second");
     System.out.println("P99: " + stats.getPercentile(99) + " milliseconds");
     System.out.println("Min: " + stats.getMin() + " milliseconds; Max: " + stats.getMax() + " milliseconds");
     Collections.sort(latencies);
