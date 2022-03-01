@@ -4,6 +4,7 @@ import io.swagger.client.ApiResponse;
 import io.swagger.client.api.SkiersApi;
 import io.swagger.client.model.LiftRide;
 import java.util.List;
+import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -22,12 +23,12 @@ public class SkierThread extends Thread {
   private CountDownLatch latch;
   private CountDownLatch curLatch;
   private Results results;
-  private List<Record> part2Records;
+  private Queue<Record> part2Records;
 
   public SkierThread(Integer resortID, String seasonID, String dayID,
       Integer startSkierID, Integer endSkierID, Integer startTime, Integer endTime,
       Integer liftID, int numPostRequests, CountDownLatch latch, CountDownLatch curLatch, Results results,
-      List<Record> part2Records) {
+      Queue<Record> part2Records) {
     this.resortID = resortID;
     this.seasonID = seasonID;
     this.dayID = dayID;
@@ -64,11 +65,11 @@ public class SkierThread extends Thread {
               .writeNewLiftRideWithHttpInfo(liftRide, this.resortID, this.seasonID, this.dayID, skierID);
           this.results.incrementSuccessfulPost(1);
           long endTime = System.currentTimeMillis();
-          this.part2Records.add(new Record(startTime, "POST", endTime-startTime, res.getStatusCode()));
+          this.part2Records.offer(new Record(startTime, "POST", endTime-startTime, res.getStatusCode()));
           break;
         } catch (ApiException e) {
           this.results.incrementFailedPost(1);
-          this.part2Records.add(new Record(startTime, "POST", endTime-startTime, e.getCode()));
+          this.part2Records.offer(new Record(startTime, "POST", endTime-startTime, e.getCode()));
           System.err.println("Exception when calling SkierApi#writeNewLiftRide, tried " + j + " times");
           e.printStackTrace();
         }

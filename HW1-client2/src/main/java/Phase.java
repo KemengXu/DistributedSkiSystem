@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
 
 public class Phase {
@@ -15,11 +16,11 @@ public class Phase {
   private CountDownLatch latch;
   private CountDownLatch curLatch;
   private Results results;
-  private List<Record> part2Records;
+  private Queue<Record> part2Records;
 
   public Phase(int numThreads, int numSkiers, Integer resortID, String seasonID,
       String dayID, Integer numLifts, int startTime, int endTime, int numPostRequests,
-      CountDownLatch latch, Results results) {
+      CountDownLatch latch, Results results, Queue<Record> part2Records) {
     this.numThreads = numThreads;
     this.numSkiers = numSkiers;
     this.resortID = resortID;
@@ -32,7 +33,7 @@ public class Phase {
     this.latch = latch;
     this.curLatch = new CountDownLatch(numThreads);
     this.results = results;
-    this.part2Records = new ArrayList<>();
+    this.part2Records = part2Records;
   }
 
   public void run() throws InterruptedException {
@@ -49,9 +50,5 @@ public class Phase {
 
   public void await() throws InterruptedException {
     curLatch.await();
-  }
-
-  public List<Record> getPart2Records(){
-    return part2Records;
   }
 }

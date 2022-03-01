@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CountDownLatch;
 
 public class UpicSkiClient {
@@ -18,6 +20,7 @@ public class UpicSkiClient {
     String port = input.port;
 
     Results results = new Results();
+    Queue<Record> part2Records = new ConcurrentLinkedQueue<>();
 
     long startTime = System.currentTimeMillis();
 
@@ -26,14 +29,14 @@ public class UpicSkiClient {
     int numP1Requests = (int) Math.round((numRuns * PHASE1_FACTOR) * (numSkiers /  (numP1Threads + 0.0)));
     CountDownLatch latch1 = new CountDownLatch((int)Math.ceil(numP1Threads * 0.2));
     Phase phase1 = new Phase(numP1Threads, numSkiers, 5, "2019", "7", numLifts, 1,
-        90, numP1Requests, latch1, results);
+        90, numP1Requests, latch1, results, part2Records);
     phase1.run();
 
     // Phase 2
     int numP2Requests = (int) Math.round((numRuns * PHASE2_FACTOR) * (numSkiers / (numThreads + 0.0)));
     CountDownLatch latch2 = new CountDownLatch((int)Math.ceil(numThreads * 0.2));
     Phase phase2 = new Phase(numThreads, numSkiers, 5, "2019", "7", numLifts, 91, 360,
-        numP2Requests, latch2, results);
+        numP2Requests, latch2, results, part2Records);
     latch1.await();
     phase2.run();
 
@@ -41,7 +44,7 @@ public class UpicSkiClient {
     int numP3Threads = (int) Math.round(numThreads * PHASE3_FACTOR);
     int numP3Requests = (int) Math.round(numRuns * 0.1);
     Phase phase3 = new Phase(numP3Threads, numSkiers, 5, "2019", "7", numLifts, 361,
-        420, numP3Requests, latch1, results);
+        420, numP3Requests, latch1, results, part2Records);
     latch2.await();
     phase3.run();
 
@@ -71,12 +74,8 @@ public class UpicSkiClient {
     System.out.println("The total throughput in requests per second " + throughPut);
 
     // part2
-    List<Record> recordList = new ArrayList<>();
-    recordList.addAll(phase1.getPart2Records());
-    recordList.addAll(phase2.getPart2Records());
-    recordList.addAll(phase3.getPart2Records());
+    RecordProcessor recordProcessor = new RecordProcessor(part2Records, throughPut);
 
-    RecordProcessor recordProcessor = new RecordProcessor(recordList, throughPut);
     recordProcessor.process();
   }
 }

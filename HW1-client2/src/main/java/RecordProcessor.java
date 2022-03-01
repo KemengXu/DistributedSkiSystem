@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import java.util.Queue;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class RecordProcessor {
-  private List<Record> recordList;
+  private Queue<Record> part2Records;
   private long throughPut;
 
-  public RecordProcessor(List<Record> recordList, long throughPut) {
-    this.recordList = recordList;
+  public RecordProcessor(Queue<Record> part2Records, long throughPut) {
+    this.part2Records = part2Records;
     this.throughPut = throughPut;
   }
 
@@ -24,7 +25,7 @@ public class RecordProcessor {
     try {
       FileWriter csvWriter = new FileWriter( "E:\\NEU\\courses\\6650\\records.csv");
       csvWriter.append("startTime,requestType,latency,responseCode\n");
-      for (Record record : this.recordList) {
+      for (Record record : part2Records) {
         csvWriter.append(record.toCSVFormat());
       }
       csvWriter.flush();
@@ -38,7 +39,7 @@ public class RecordProcessor {
   private void printPart2Results(){
     DescriptiveStatistics stats = new DescriptiveStatistics();
     List<Long> latencies = new ArrayList<>();
-    for (Record record: recordList){
+    for (Record record: part2Records){
       stats.addValue(record.getLatency());
       latencies.add(record.getLatency());
     }
